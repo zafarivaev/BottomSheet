@@ -12,6 +12,8 @@ class WelcomeContainerViewController: BottomSheetContainerViewController<HelloVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Do something
     }
     
 }

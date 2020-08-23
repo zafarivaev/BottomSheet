@@ -77,7 +77,7 @@ open class BottomSheetContainerViewController<Content: UIViewController, BottomS
             if self.state == .full {
                 guard translation.y > 0 else { return }
                 
-                topConstraint.constant = -configuration.height + yTranslationMagnitude
+                topConstraint.constant = -(configuration.height - yTranslationMagnitude)
                 
                 self.view.layoutIfNeeded()
             } else {
@@ -95,9 +95,8 @@ open class BottomSheetContainerViewController<Content: UIViewController, BottomS
             }
         case .ended:
             if self.state == .full {
-                guard translation.y > 0 else { return }
                 
-                if yTranslationMagnitude >= configuration.height / 2 || yVelocityMagnitude > 1000 {
+                if yTranslationMagnitude >= configuration.height / 2 || velocity.y > 1000 {
                     
                     self.hideBottomSheet()
                 } else {
@@ -105,9 +104,8 @@ open class BottomSheetContainerViewController<Content: UIViewController, BottomS
                     self.showBottomSheet()
                 }
             } else {
-                guard translation.y < 0 else { return }
                 
-                if yTranslationMagnitude >= configuration.height / 2 || yVelocityMagnitude > 1000 {
+                if yTranslationMagnitude >= configuration.height / 2 || velocity.y < -1000 {
                     
                     self.showBottomSheet()
                     
