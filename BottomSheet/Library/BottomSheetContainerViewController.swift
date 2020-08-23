@@ -39,6 +39,7 @@ open class BottomSheetContainerViewController<Content: UIViewController, BottomS
                 self.state = .full
             })
         } else {
+            self.view.layoutIfNeeded()
             self.state = .full
         }
     }
@@ -58,6 +59,7 @@ open class BottomSheetContainerViewController<Content: UIViewController, BottomS
                 self.state = .initial
             })
         } else {
+            self.view.layoutIfNeeded()
             self.state = .initial
         }
     }
