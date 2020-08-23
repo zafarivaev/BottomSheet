@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class BottomSheetContainerViewController<Content: UIViewController, BottomSheet: UIViewController> : UIViewController {
+open class BottomSheetContainerViewController<Content: UIViewController, BottomSheet: UIViewController> : UIViewController, UIGestureRecognizerDelegate {
     
     // MARK: - Initialization
     public init(contentViewController: Content,
@@ -149,7 +149,7 @@ open class BottomSheetContainerViewController<Content: UIViewController, BottomS
     // MARK: - Pan Gesture
     lazy var panGesture: UIPanGestureRecognizer = {
         let pan = UIPanGestureRecognizer()
-        pan.cancelsTouchesInView = false
+        pan.delegate = self
         pan.addTarget(self, action: #selector(handlePan))
         return pan
     }()
@@ -196,4 +196,8 @@ open class BottomSheetContainerViewController<Content: UIViewController, BottomS
         bottomSheetViewController.didMove(toParent: self)
     }
     
+    // MARK: - UIGestureRecognizer Delegate
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
 }
