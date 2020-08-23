@@ -13,13 +13,11 @@ open class BottomSheetContainerViewController<Content: UIViewController, BottomS
     // MARK: - Initialization
     public init(contentViewController: Content,
                 bottomSheetViewController: BottomSheet,
-                bottomSheetConfiguration: BottomSheetConfiguration,
-                bottomSheetState: BottomSheetState = .initial) {
+                bottomSheetConfiguration: BottomSheetConfiguration) {
         
         self.contentViewController = contentViewController
         self.bottomSheetViewController = bottomSheetViewController
         self.configuration = bottomSheetConfiguration
-        self.state = bottomSheetState
         
         super.init(nibName: nil, bundle: nil)
         
@@ -139,7 +137,7 @@ open class BottomSheetContainerViewController<Content: UIViewController, BottomS
         case full
     }
     
-    var state: BottomSheetState
+    var state: BottomSheetState = .initial
     
     // MARK: - Children
     let contentViewController: Content
@@ -181,15 +179,9 @@ open class BottomSheetContainerViewController<Content: UIViewController, BottomS
         
         contentViewController.didMove(toParent: self)
         
-        if state == .initial {
-            topConstraint = bottomSheetViewController.view.topAnchor
-                .constraint(equalTo: self.view.bottomAnchor,
-                            constant: -configuration.initialOffset)
-        } else {
-            topConstraint = bottomSheetViewController.view.topAnchor
-                .constraint(equalTo: self.view.bottomAnchor,
-                            constant: -configuration.height)
-        }
+        topConstraint = bottomSheetViewController.view.topAnchor
+            .constraint(equalTo: self.view.bottomAnchor,
+                        constant: -configuration.initialOffset)
         
         NSLayoutConstraint.activate([
             bottomSheetViewController.view.heightAnchor

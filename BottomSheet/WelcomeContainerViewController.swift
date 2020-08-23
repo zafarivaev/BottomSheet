@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WelcomeContainerViewController: BottomSheetContainerViewController<ViewController, BottomSheetViewController> {
+class WelcomeContainerViewController: BottomSheetContainerViewController<HelloViewController, BottomSheetViewController> {
     
     override func viewDidLoad() {
         super.viewDidLoad()

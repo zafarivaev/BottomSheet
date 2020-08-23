@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HelloViewController.swift
 //  BottomSheet
 //
 //  Created by Zafar on 8/13/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HelloViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
