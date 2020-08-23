@@ -1,5 +1,5 @@
 //
-//  BottomSheetViewController.swift
+//  MyCustomViewController.swift
 //  BottomSheet
 //
 //  Created by Zafar on 8/13/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BottomSheetViewController: UIViewController {
+class MyCustomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

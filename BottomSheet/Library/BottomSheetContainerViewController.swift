@@ -70,7 +70,6 @@ open class BottomSheetContainerViewController<Content: UIViewController, BottomS
         let velocity = sender.velocity(in: bottomSheetViewController.view)
         
         let yTranslationMagnitude = translation.y.magnitude
-        let yVelocityMagnitude = velocity.y.magnitude
         
         switch sender.state {
         case .began, .changed:

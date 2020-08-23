@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.rootViewController = WelcomeContainerViewController(
             contentViewController: HelloViewController(),
-            bottomSheetViewController: BottomSheetViewController(),
+            bottomSheetViewController: MyCustomViewController(),
             bottomSheetConfiguration: .init(
                 height: UIScreen.main.bounds.height * 0.8,
                 initialOffset: 60 + window!.safeAreaInsets.bottom

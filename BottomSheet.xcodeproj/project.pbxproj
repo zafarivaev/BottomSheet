@@ -13,7 +13,7 @@
 		1C2B8EE124E4832400EFFFEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2B8EE024E4832400EFFFEF /* Assets.xcassets */; };
 		1C2B8EE424E4832400EFFFEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C2B8EE224E4832400EFFFEF /* LaunchScreen.storyboard */; };
 		1C2B8EEC24E4836C00EFFFEF /* BottomSheetContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B8EEB24E4836C00EFFFEF /* BottomSheetContainerViewController.swift */; };
-		1C2B8EEE24E4838400EFFFEF /* BottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B8EED24E4838400EFFFEF /* BottomSheetViewController.swift */; };
+		1C2B8EEE24E4838400EFFFEF /* MyCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2B8EED24E4838400EFFFEF /* MyCustomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		1C2B8EE324E4832400EFFFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C2B8EE524E4832400EFFFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C2B8EEB24E4836C00EFFFEF /* BottomSheetContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetContainerViewController.swift; sourceTree = "<group>"; };
-		1C2B8EED24E4838400EFFFEF /* BottomSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewController.swift; sourceTree = "<group>"; };
+		1C2B8EED24E4838400EFFFEF /* MyCustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 				1C2B8EEF24E4838C00EFFFEF /* Library */,
 				1C2B8ED724E4832100EFFFEF /* AppDelegate.swift */,
 				1C15059F24E4897C00ABA9CA /* WelcomeContainerViewController.swift */,
-				1C2B8EED24E4838400EFFFEF /* BottomSheetViewController.swift */,
+				1C2B8EED24E4838400EFFFEF /* MyCustomViewController.swift */,
 				1C2B8EDB24E4832100EFFFEF /* HelloViewController.swift */,
 				1C2B8EE024E4832400EFFFEF /* Assets.xcassets */,
 				1C2B8EE224E4832400EFFFEF /* LaunchScreen.storyboard */,
@@ -152,7 +152,7 @@
 				1C1505A024E4897C00ABA9CA /* WelcomeContainerViewController.swift in Sources */,
 				1C2B8ED824E4832100EFFFEF /* AppDelegate.swift in Sources */,
 				1C2B8EEC24E4836C00EFFFEF /* BottomSheetContainerViewController.swift in Sources */,
-				1C2B8EEE24E4838400EFFFEF /* BottomSheetViewController.swift in Sources */,
+				1C2B8EEE24E4838400EFFFEF /* MyCustomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
