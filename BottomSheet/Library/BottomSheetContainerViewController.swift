@@ -192,6 +192,8 @@ open class BottomSheetContainerViewController<Content: UIViewController, BottomS
                 .constraint(equalTo: self.view.rightAnchor),
             topConstraint
         ])
+        
+        bottomSheetViewController.didMove(toParent: self)
     }
     
 }
