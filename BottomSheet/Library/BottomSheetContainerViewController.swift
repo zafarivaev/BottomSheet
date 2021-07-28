@@ -95,7 +95,7 @@ open class BottomSheetContainerViewController<Content: UIViewController, BottomS
         case .ended:
             if self.state == .full {
                 
-                if yTranslationMagnitude >= configuration.height / 2 || velocity.y > 1000 {
+                if yTranslationMagnitude <= configuration.height / 2 || velocity.y > 1000 {
                     
                     self.hideBottomSheet()
                 } else {
