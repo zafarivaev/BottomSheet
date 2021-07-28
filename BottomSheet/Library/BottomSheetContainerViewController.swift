@@ -98,7 +98,7 @@ open class BottomSheetContainerViewController<Content: UIViewController, BottomS
                 if velocity.y < 0 {
                     // Bottom Sheet was full initially and the user tried to move it to the top
                     self.showBottomSheet()
-                } else if yTranslationMagnitude >= configuration.height / 2 || velocity.y > 300 {
+                } else if yTranslationMagnitude >= configuration.height / 2 || velocity.y > 1000 {
                     self.hideBottomSheet()
                 } else {
                     self.showBottomSheet()
